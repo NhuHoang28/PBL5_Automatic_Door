@@ -48,6 +48,6 @@ for img, idx in loader:
         emb = resnet(face.unsqueeze(0))  
         embedding_list.append(emb.detach()) 
         name_list.append(idx_to_class[idx]) 
-        update(idx_to_class[idx])
+        # update(idx_to_class[idx])
 data = [embedding_list, name_list]
 torch.save(data, 'data.pt')  
